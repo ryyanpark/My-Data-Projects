@@ -1,2 +1,1 @@
-
 [View project on Tableau Public](https://public.tableau.com/views/BellabeatCaseStudy_16588024394680/D1-Title?:language=en-US&:display_count=n&:origin=viz_share_link)
