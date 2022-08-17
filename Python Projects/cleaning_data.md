@@ -1,10 +1,10 @@
 # Cleaning Data in Python (in progress)
 
 ### Import CSV with custom Null types
-'''
+```
 na_vals = ['NA', 'Missing', 'N/A', 'none']
 df = pd.read_csv('csv.file', na_values=na_vals, index_col='Set Column As Index')
-'''
+```
 
 ### Find/Edit NaN values
 ```
