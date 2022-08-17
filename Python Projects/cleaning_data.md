@@ -40,3 +40,6 @@ filt = df['column'] == 'value'
 df.loc[filt]
 df.loc['row', 'column'] #use ":" for multiple
 ```
+
+### Rename Columns
+df.rename(columns={'org column': 'new column', ...}, inplace=True)
