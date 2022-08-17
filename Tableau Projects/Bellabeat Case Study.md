@@ -1,7 +1,7 @@
 # [Bellabeat Case Study](https://public.tableau.com/views/BellabeatCaseStudy_16588024394680/D1-Title?:language=en-US&:display_count=n&:origin=viz_share_link)
 
-![Bellabeat-preview-1.pdf](https://github.com/ryyanpark/My-Data-Visualizations/files/9356909/Bellabeat-preview-1.pdf)
-![Bellabeat-preview-2.pdf](https://github.com/ryyanpark/My-Data-Visualizations/files/9356910/Bellabeat-preview-2.pdf)
+![Bellabeat-preview-1.pdf](https://github.com/ryyanpark/My-Data-Visualizations/files/9356924/Bellabeat-preview-1.pdf)
+![Bellabeat-preview-2.pdf](https://github.com/ryyanpark/My-Data-Visualizations/files/9356925/Bellabeat-preview-2.pdf)
 
 
 ## Tools
