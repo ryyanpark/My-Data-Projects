@@ -19,8 +19,9 @@ df.dropna() #axis='index' vs 'column', how='any' vs 'all', subset=['column(s)']
 ### Check/Convert Datatypes
 ```
 df.dtypes
+df['column'].astype(float) 
 #type(np.nan) is a float
-df['column'].astype(float) #convert to float if column includes NaN values
+#convert to float if column includes NaN values
 ```
 
 ### Sort
