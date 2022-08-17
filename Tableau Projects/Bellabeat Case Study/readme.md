@@ -1,4 +1,4 @@
-# [Bellabeat Case Study](https://public.tableau.com/views/BellabeatCaseStudy_16588024394680/D1-Title?:language=en-US&:display_count=n&:origin=viz_share_link)
+# [Bellabeat Case Study - View on Tableau Public](https://public.tableau.com/views/BellabeatCaseStudy_16588024394680/D1-Title?:language=en-US&:display_count=n&:origin=viz_share_link)
 Using FitBit data provided through Kaggle, a case study was done to discover meaningful insights into smart watch users and provide recommendations for Bellabeat.
 
 ## Tools
