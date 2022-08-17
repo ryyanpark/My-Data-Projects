@@ -1,0 +1,6 @@
+member_casual,rideable_type,mean_length_of_trip_min,mean_length_of_trip_day,mean_length_of_trip_sec,max_length_of_trip_min,max_length_of_trip_day
+member,classic_bike,13.74,0.01,824.23,1559.9,1.083
+member,electric_bike,12.01,0.01,720.38,480.517,0.334
+casual,electric_bike,18.96,0.01,1137.43,487.267,0.338
+casual,classic_bike,28.72,0.02,1723.08,1559.933,1.083
+casual,docked_bike,83.13,0.06,4987.62,55944.15,38.85

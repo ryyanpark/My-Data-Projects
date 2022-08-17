@@ -1,0 +1,6 @@
+member_casual,rideable_type,total_rides_cas_mem,total_rides_bike,total_hours,bicycle_inv,total_num_stations
+member,electric_bike,3300623,2368208,264050.59,5824,1105
+casual,electric_bike,2559499,2368208,331323.25,5824,1105
+member,classic_bike,3300623,3217474,453571.72,5824,1105
+casual,classic_bike,2559499,3217474,591787.23,5824,1105
+casual,docked_bike,2559499,274440,380223.04,5824,1105
