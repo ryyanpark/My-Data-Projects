@@ -15,34 +15,32 @@ GROUP BY
 
 ##### Check if column is in every table
 ```
- SELECT
+SELECT
  	"table_name",
  	SUM(CASE
      		WHEN column_name = 'Id' THEN 1 --change
-   			ELSE
-   			0
- 		END
-   	) AS has_id_column
+   		ELSE 0
+ 	END) AS has_id_column
 FROM
  	information_schema."columns" c 
 WHERE 
  	table_schema = 'public' --change
 GROUP BY
- 1
+	1
 ORDER BY
- 1 ASC;
+	1 ASC;
 ``` 
  
 ##### Table, column, data type info
 ```
 SELECT
 	table_name,
-    column_name,
-    data_type
+	column_name,
+	data_type
 FROM
-    information_schema.columns
+	information_schema.columns
 WHERE
-    table_schema = 'public';
+	table_schema = 'public';
 ```    
     
 ##### This query checks to make sure that each table has a column of a date or time related type
@@ -51,28 +49,22 @@ WHERE
 SELECT
 	table_name,
  	SUM(CASE
-     	WHEN data_type IN ('date','timestamp without time zone','TIMESTAMP', 'DATETIME', 'TIME', 'DATE') THEN 1
-	   ELSE
-	   0
- 	END
-   	) AS "has_time_info"
+		WHEN data_type IN ('date','timestamp without time zone','TIMESTAMP', 'DATETIME', 'TIME', 'DATE') THEN 1
+		ELSE 0
+ 	END) AS "has_time_info"
 FROM
 	information_schema."columns" c 
 WHERE
 	table_schema = 'public' 
 	AND
-	data_type IN ('date','timestamp without time zone','TIMESTAMP',
-	   'DATETIME',
-	   'DATE')
+	data_type IN ('date', 'timestamp without time zone', 'TIMESTAMP', 'DATETIME', 'DATE')
 GROUP BY
  	1
 HAVING
  	SUM(CASE
-     	WHEN data_type IN ('date','timestamp without time zone','TIMESTAMP', 'DATETIME', 'TIME', 'DATE') THEN 1
-	   ELSE
-	   0
- 	END
-   	) = 1;
+		WHEN data_type IN ('date','timestamp without time zone','TIMESTAMP', 'DATETIME', 'TIME', 'DATE') THEN 1
+		ELSE 0
+ 	END) = 1;
 ```   
    
 ##### If we found that we have columns of the type DATETIME, TIMESTAMP, or DATE we can use this query to check for their names
@@ -85,9 +77,7 @@ SELECT
 FROM
  	information_schema."columns" c 
 WHERE
-	data_type IN ('date','timestamp without time zone','TIMESTAMP',
-	   'DATETIME',
-	   'DATE');
+	data_type IN ('date', 'timestamp without time zone', 'TIMESTAMP', 'DATETIME', 'DATE');
 ```
 
 ##### We now know that every table has an "Id" column but we don't know how to join the dates
@@ -106,83 +96,84 @@ WHERE
 	AND table_schema = 'public';	  
 ```
 	
-##### ADVANCED
 ##### In the dailyActivity_merged table we saw that there is a column called ActivityDate, let's check to see what it looks like
 ##### One way to check if something follows a particular pattern is to use a regular expression.
 ##### In this case we use the regular expression for a timestamp format to check if the column follows that pattern.
 ##### The is_timestamp column demonstrates that this column is a valid timestamp column
 ```
 SELECT
- "ActivityDate",
- CASE WHEN "ActivityDate"::VARCHAR(50) ~ '^\d{4}-\d{1,2}-\d{1,2}[T ]\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,6})? *(([+-]\d{1,2}(:\d{1,2})?)|Z|UTC)?$' THEN 'TRUE' ELSE 'FALSE' END AS is_timestamp
+	"ActivityDate",
+	CASE WHEN "ActivityDate"::VARCHAR(50) ~ '^\d{4}-\d{1,2}-\d{1,2}[T ]\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,6})? *(([+-]\d{1,2}(:\d{1,2})?)|Z|UTC)?$' 
+	THEN 'TRUE' ELSE 'FALSE' END AS is_timestamp
 FROM
 	dailyactivity_merged dm  
 LIMIT
- 10;
+	10;
 ```
  
 ##### To quickly check if all columns follow the timestamp pattern we can take the minimum value of the boolean expression across the entire table
 ```
 SELECT
- CASE
-   WHEN MIN(CASE WHEN "ActivityHour"::VARCHAR(50) ~ '^\d{4}-\d{1,2}-\d{1,2}[T ]\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,6})? *(([+-]\d{1,2}(:\d{1,2})?)|Z|UTC)?$' THEN 1 ELSE 0 END)>0 THEN 'Valid'
- ELSE
- 'Not Valid'
-END
- AS valid_test
+	CASE
+		WHEN MIN(CASE WHEN "ActivityHour"::VARCHAR(50) ~ '^\d{4}-\d{1,2}-\d{1,2}[T ]\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,6})? *(([+-]\d{1,2}(:\d{1,2})?)|Z|UTC)?$' THEN 1 ELSE 0 END)>0 THEN 'Valid'
+	 	ELSE 'Not Valid'
+	END AS valid_test
 FROM
- hourlyintensities_merged hm ;
+	hourlyintensities_merged hm;
 ```
 
 ##### Say we want to do an analysis based upon daily data, this could help us to find tables that might be at the day level
 ```
 SELECT
- DISTINCT table_name
+	DISTINCT table_name
 FROM
- information_schema."columns" c 
+	information_schema."columns" c 
 WHERE
- LOWER(table_name) ~ 'day|daily';
+	LOWER(table_name) ~ 'day|daily';
 ```
 
 ##### Now that we have a list of tables we should look at the columns that are shared among the tables
 ```
 SELECT
- column_name,
- data_type,
- COUNT(table_name) AS table_count
+	column_name,
+	data_type,
+	COUNT(table_name) AS table_count
 FROM
- information_schema."columns" c 
+	information_schema."columns" c 
 WHERE
- LOWER(table_name) ~ 'day|daily'
+	LOWER(table_name) ~ 'day|daily'
 GROUP BY
- 1,
- 2;
+	1,
+	2;
 ```
 
 ##### Now that we have a list of tables we should look at the columns that are shared among the tables
 ##### We should also make certain that the data types align between tables
 ```
 SELECT
- column_name,
- table_name,
- data_type
+	column_name,
+	table_name,
+	data_type
 FROM
- information_schema."columns" c 
+	information_schema."columns" c 
 WHERE
- LOWER(table_name) ~ 'day|daily'
- AND column_name IN (
- SELECT
-   column_name
- FROM
-   information_schema."columns" c 
- WHERE
-   LOWER(table_name) ~ 'day|daily'
- GROUP BY
-   1
- HAVING
-   COUNT(table_name) >=2)
+	LOWER(table_name) ~ 'day|daily'
+	AND column_name IN 
+	(SELECT
+		column_name
+	FROM
+		information_schema."columns" c 
+	WHERE
+   		LOWER(table_name) ~ 'day|daily'
+ 	GROUP BY
+		1
+	HAVING
+		COUNT(table_name) >=2)
 ORDER BY
- 1;
+	1;
+```
+
+```
 SELECT
  A."Id",
  A."Calories",
