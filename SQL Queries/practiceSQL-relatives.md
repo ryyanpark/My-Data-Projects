@@ -1,4 +1,4 @@
-##### Practice SQL - Finding relatives
+## Practice SQL - Finding relatives
 
 ```
 CREATE TABLE relatives_table (PERSON_ID varchar, RELATIVE_ID1 varchar, RELATIVE_ID3 varchar);
