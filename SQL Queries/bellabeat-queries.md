@@ -1,5 +1,4 @@
-# Bellabeat Queries
-### PostgreSQL in DBeaver
+## Bellabeat Queries - PostgreSQL in DBeaver
 
 ##### List all columns from dataset; Check to see which column names are shared across tables
 ```
