@@ -1,4 +1,4 @@
-##### Cyclistic Queries - BigQuery
+## Cyclistic Queries - BigQuery
 
 ```
 WITH
