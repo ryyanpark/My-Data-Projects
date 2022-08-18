@@ -92,9 +92,9 @@ WHERE
 ```
 
 ##### We now know that every table has an "Id" column but we don't know how to join the dates
- -- If we find that not every table has a DATETIME, TIMESTAMP, or DATE column we use their names to check for what might be date-related
- -- Here we check to see if the column name has any of the keywords below:
- -- date, minute, daily, hourly, day, seconds
+##### If we find that not every table has a DATETIME, TIMESTAMP, or DATE column we use their names to check for what might be date-related
+##### Here we check to see if the column name has any of the keywords below:
+##### date, minute, daily, hourly, day, seconds
 ```
 SELECT
 	table_name,
@@ -105,12 +105,14 @@ FROM
 WHERE
 	LOWER(column_name) ~ 'date|minute|daily|hourly|day|seconds'
 	AND table_schema = 'public';	  
+```
 	
- -- ADVANCED
- -- In the dailyActivity_merged table we saw that there is a column called ActivityDate, let's check to see what it looks like
- -- One way to check if something follows a particular pattern is to use a regular expression.
- -- In this case we use the regular expression for a timestamp format to check if the column follows that pattern.
- -- The is_timestamp column demonstrates that this column is a valid timestamp column
+##### ADVANCED
+##### In the dailyActivity_merged table we saw that there is a column called ActivityDate, let's check to see what it looks like
+##### One way to check if something follows a particular pattern is to use a regular expression.
+##### In this case we use the regular expression for a timestamp format to check if the column follows that pattern.
+##### The is_timestamp column demonstrates that this column is a valid timestamp column
+```
 SELECT
  "ActivityDate",
  CASE WHEN "ActivityDate"::VARCHAR(50) ~ '^\d{4}-\d{1,2}-\d{1,2}[T ]\d{1,2}:\d{1,2}:\d{1,2}(\.\d{1,6})? *(([+-]\d{1,2}(:\d{1,2})?)|Z|UTC)?$' THEN 'TRUE' ELSE 'FALSE' END AS is_timestamp
@@ -159,7 +161,7 @@ GROUP BY
 ```
 
 ##### Now that we have a list of tables we should look at the columns that are shared among the tables
- -- We should also make certain that the data types align between tables
+##### We should also make certain that the data types align between tables
 ```
 SELECT
  column_name,
@@ -393,7 +395,7 @@ END
 ```
  
 ##### custom
--- sum of METs grouped by day, time of day
+##### sum of METs grouped by day, time of day
 ``` WITH x AS (
 SELECT
    "Id",
@@ -444,7 +446,7 @@ ORDER BY
 ```
 	
 ##### custom
--- average heartrate group by day, time of day
+##### average heartrate group by day, time of day
 ```
 WITH x AS (
 SELECT
@@ -496,7 +498,7 @@ ORDER BY
 ```
 	
 ##### custom
--- total number/time of naps group by day, time of day
+##### total number/time of naps group by day, time of day
 WITH x AS
 ```
 (
@@ -603,7 +605,7 @@ GROUP BY
 ```
  
 ##### custom
--- asleep vs not asleep in bed,, group by day
+##### asleep vs not asleep in bed,, group by day
 ```
 WITH x AS
 (
@@ -645,7 +647,7 @@ ORDER BY
 ```
 
 ##### custom
--- total calories group by day, time of day
+##### total calories group by day, time of day
 ```
 WITH x AS (
 SELECT
@@ -697,7 +699,7 @@ ORDER BY
 ```
 	
 ##### custom
--- total steps group by day, time of day
+##### total steps group by day, time of day
 ```
 WITH x AS (
 SELECT
@@ -748,7 +750,7 @@ ORDER BY
 ```
 	
 ##### custom
--- intensities grouped by id, day of week, time of day
+##### intensities grouped by id, day of week, time of day
 ```
 WITH x AS
 (
@@ -810,7 +812,7 @@ END;
 ```
 
 ##### custom
--- distance grouped by day of week
+##### distance grouped by day of week
 ```
 WITH x AS (
 SELECT
