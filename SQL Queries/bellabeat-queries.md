@@ -43,8 +43,8 @@ WHERE
 	table_schema = 'public';
 ```    
     
-##### This query checks to make sure that each table has a column of a date or time related type
-##### If your column types were detected properly prior to upload this table should be empty if HAVING = 0
+##### Check each table for a column of a date or time related type
+##### If column types were detected properly prior to upload, this table should be empty if HAVING = 0
 ```
 SELECT
 	table_name,
@@ -67,7 +67,7 @@ HAVING
  	END) = 1;
 ```   
    
-##### If we found that we have columns of the type DATETIME, TIMESTAMP, or DATE we can use this query to check for their names
+##### Check for columns of the type DATETIME, TIMESTAMP, or DATE
 ```
 SELECT
 	CONCAT(table_catalog,'.',table_schema,'.',table_name) AS table_path,
@@ -80,10 +80,7 @@ WHERE
 	data_type IN ('date', 'timestamp without time zone', 'TIMESTAMP', 'DATETIME', 'DATE');
 ```
 
-##### We now know that every table has an "Id" column but we don't know how to join the dates
-##### If we find that not every table has a DATETIME, TIMESTAMP, or DATE column we use their names to check for what might be date-related
-##### Here we check to see if the column name has any of the keywords below:
-##### date, minute, daily, hourly, day, seconds
+##### Check to see if the column name has any of the keywords: date, minute, daily, hourly, day, seconds
 ```
 SELECT
 	table_name,
@@ -95,11 +92,8 @@ WHERE
 	LOWER(column_name) ~ 'date|minute|daily|hourly|day|seconds'
 	AND table_schema = 'public';	  
 ```
-	
-##### In the dailyActivity_merged table we saw that there is a column called ActivityDate, let's check to see what it looks like
-##### One way to check if something follows a particular pattern is to use a regular expression.
-##### In this case we use the regular expression for a timestamp format to check if the column follows that pattern.
-##### The is_timestamp column demonstrates that this column is a valid timestamp column
+
+##### 'is_timestamp' column checks if it is a valid timestamp column
 ```
 SELECT
 	"ActivityDate",
@@ -122,7 +116,7 @@ FROM
 	hourlyintensities_merged hm;
 ```
 
-##### Say we want to do an analysis based upon daily data, this could help us to find tables that might be at the day level
+##### Find tables that might be at the day level
 ```
 SELECT
 	DISTINCT table_name
@@ -132,7 +126,7 @@ WHERE
 	LOWER(table_name) ~ 'day|daily';
 ```
 
-##### Now that we have a list of tables we should look at the columns that are shared among the tables
+##### Look at the columns that are shared among the tables
 ```
 SELECT
 	column_name,
@@ -147,8 +141,7 @@ GROUP BY
 	2;
 ```
 
-##### Now that we have a list of tables we should look at the columns that are shared among the tables
-##### We should also make certain that the data types align between tables
+##### Look at the columns that are shared among the tables; make sure that the data types align between tables
 ```
 SELECT
 	column_name,
@@ -228,8 +221,7 @@ ON
  AND A."ActivityDate"=Sl."SleepDay";
 ```
 
-##### Say we are considering sleep related products as a possibility, let's take a moment to see if/ how people nap during the day
-##### To do this we are assuming that a nap is any time someone sleeps but goes to sleep and wakes up on the same day
+##### Naps per day, assuming that a nap is any time someone goes to sleep and wakes up on the same day
 ```
 SELECT
  "Id",
@@ -265,8 +257,7 @@ ORDER BY
  3 DESC;
 ```
  
-##### Suppose we would like to do an analysis based upon the time of day and day of the week
-##### We will do this at a person level such that we smooth over anomalous days for an individual
+##### Analysis based upon the time of day and day of the week at the person level to smooth over anomalous days for an individual
 ```
 WITH
  user_dow_summary AS (
