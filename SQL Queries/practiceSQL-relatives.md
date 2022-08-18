@@ -117,3 +117,11 @@ FROM
 	ORDER BY 1
 	) x
 ```
+
+```
+DROP TABLE relatives_table 
+```
+
+```
+DROP VIEW base_query, relatives_table_view 
+```
