@@ -22,19 +22,6 @@ df.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -171,19 +158,6 @@ df2.head(1)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -239,19 +213,6 @@ df2[df2['Amount'].isnull()]
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -442,19 +403,6 @@ df2.head(-5)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -717,19 +665,6 @@ df_weight.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -833,16 +768,8 @@ plt.title('Weight')
 plt.ylabel('Pounds')
 ```
 
-
-
-
-    Text(0, 0.5, 'Pounds')
-
-
-
-
     
-![png](/Images/output_39_1.png)
+![png](Images/output_39_1.png)
     
 
 
@@ -858,15 +785,8 @@ plt.title('Weight Percentile')
 ```
 
 
-
-
-    Text(0.5, 1.0, 'Weight Percentile')
-
-
-
-
     
-![png](output_41_1.png)
+![png](Images/output_41_1.png)
     
 
 
@@ -885,19 +805,6 @@ df_len.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1002,16 +909,8 @@ plt.title('Length')
 plt.ylabel('Inches')
 ```
 
-
-
-
-    Text(0, 0.5, 'Inches')
-
-
-
-
     
-![png](output_48_1.png)
+![png](Images/output_48_1.png)
     
 
 
@@ -1027,15 +926,8 @@ plt.title('Length Percentile')
 ```
 
 
-
-
-    Text(0.5, 1.0, 'Length Percentile')
-
-
-
-
     
-![png](output_50_1.png)
+![png](Images/output_50_1.png)
     
 
 
@@ -1054,19 +946,6 @@ df_feed.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1179,15 +1058,8 @@ plt.ylabel('Ounces')
 ```
 
 
-
-
-    Text(0, 0.5, 'Ounces')
-
-
-
-
     
-![png](output_59_1.png)
+![png](Images/output_59_1.png)
     
 
 
@@ -1203,19 +1075,6 @@ df_feed_sum_hr_bar.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -1297,7 +1156,7 @@ fig.tight_layout()
 
 
     
-![png](output_64_0.png)
+![png](Images/output_64_0.png)
     
 
 
@@ -1313,19 +1172,6 @@ df_feed_sum_hr_plot.head()
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1382,7 +1228,7 @@ plt.gcf().tight_layout()
 
 
     
-![png](output_68_0.png)
+![png](Images/output_68_0.png)
     
 
 
@@ -1399,19 +1245,6 @@ df_feed_avg_hr.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1453,15 +1286,8 @@ plt.xlabel('Hour')
 ```
 
 
-
-
-    Text(0.5, 0, 'Hour')
-
-
-
-
     
-![png](output_71_1.png)
+![png](Images/output_71_1.png)
     
 
 
@@ -1480,19 +1306,6 @@ df_feed_sum_mth_hr.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -1576,7 +1389,7 @@ fig.tight_layout()
 
 
     
-![png](output_75_0.png)
+![png](Images/output_75_0.png)
     
 
 
@@ -1595,19 +1408,6 @@ df_feed_avg_mth_hr.head(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead tr th {
-        text-align: left;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr>
@@ -1691,7 +1491,7 @@ fig.tight_layout()
 
 
     
-![png](output_79_0.png)
+![png](Images/output_79_0.png)
     
 
 
@@ -1710,19 +1510,6 @@ df_drty_diapers.tail(3)
 
 
 <div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -1821,7 +1608,7 @@ ax.tick_params(axis='x', rotation=45)
 
 
     
-![png](output_84_0.png)
+![png](Images/output_84_0.png)
     
 
 
@@ -1849,7 +1636,7 @@ ax_dd = plt.scatter(x,y)
 
 
     
-![png](output_86_0.png)
+![png](Images/output_86_0.png)
     
 
 
