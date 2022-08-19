@@ -842,7 +842,7 @@ plt.ylabel('Pounds')
 
 
     
-![png](output_39_1.png)
+![png](/Images/output_39_1.png)
     
 
 
