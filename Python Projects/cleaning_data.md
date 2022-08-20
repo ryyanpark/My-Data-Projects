@@ -1,6 +1,6 @@
 # Cleaning Data in Python
 
-### Import CSV with custom Null types
+### Import CSV with custom Null types & non datetime formats
 ```
 na_vals = ['NA', 'Missing', 'N/A', 'none'] #custom null values
 d_parser = lambda x: pd.datetime.strptime(x, '%Y-%m-%d %I-%p') #date format
