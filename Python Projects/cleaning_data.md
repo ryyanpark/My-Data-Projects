@@ -1,4 +1,4 @@
-# Cleaning Data in Python (in progress)
+# Cleaning Data in Python
 
 ### Import CSV with custom Null types
 ```
