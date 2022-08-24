@@ -396,7 +396,7 @@ df2['Hour(dt)'] = pd.to_datetime(df2['Hour(dt)'])
 ```python
 df2 = df2.sort_values('Start Time', ascending=True)
 
-df2.head(-5)
+df2.tail(5)
 ```
 
 
@@ -1109,23 +1109,6 @@ df_feed_sum_hr_bar.head(3)
 </div>
 
 
-
-
-```python
-'''test
-df_feed_grp_hr = df_feed.groupby(['Hour(dt)'])
-df_feed_hr_agg = pd.DataFrame()
-df_feed_hr_agg['sum_amt'] = df_feed_grp_hr['Amount'].sum()
-df_feed_hr_agg['avg_amt'] = df_feed_grp_hr['Amount'].mean()
-#df_feed_hr_agg.iloc[0,0]
-df_feed_hr_agg.head()
-'''
-```
-
-
-
-
-    "test\ndf_feed_grp_hr = df_feed.groupby(['Hour(dt)'])\ndf_feed_hr_agg = pd.DataFrame()\ndf_feed_hr_agg['sum_amt'] = df_feed_grp_hr['Amount'].sum()\ndf_feed_hr_agg['avg_amt'] = df_feed_grp_hr['Amount'].mean()\n#df_feed_hr_agg.iloc[0,0]\ndf_feed_hr_agg.head()\n"
 
 
 
