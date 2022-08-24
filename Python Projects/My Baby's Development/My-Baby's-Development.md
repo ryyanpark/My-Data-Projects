@@ -403,6 +403,19 @@ df2.tail(5)
 
 
 <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -427,200 +440,10 @@ df2.tail(5)
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
+      <th>1890</th>
       <td>Elisha Jian Park</td>
-      <td>03/05/2022 0:00 AM</td>
-      <td>03/05/2022 0:00 AM</td>
-      <td>Weight</td>
-      <td>8.18</td>
-      <td>0.8411</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Measured by Nurse</td>
-      <td>2022-03-05</td>
-      <td>3</td>
-      <td>5</td>
-      <td>Saturday</td>
-      <td>00:00:00</td>
-      <td>0</td>
-      <td>2022-01-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Elisha Jian Park</td>
-      <td>03/05/2022 0:00 AM</td>
-      <td>03/05/2022 0:00 AM</td>
-      <td>Length</td>
-      <td>21.5</td>
-      <td>0.9983</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Measured by Nurse</td>
-      <td>2022-03-05</td>
-      <td>3</td>
-      <td>5</td>
-      <td>Saturday</td>
-      <td>00:00:00</td>
-      <td>0</td>
-      <td>2022-01-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Elisha Jian Park</td>
-      <td>03/06/2022 0:00 AM</td>
-      <td>03/06/2022 0:00 AM</td>
-      <td>Weight</td>
-      <td>7.875</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Measured by Nurse</td>
-      <td>2022-03-06</td>
-      <td>3</td>
-      <td>6</td>
-      <td>Sunday</td>
-      <td>00:00:00</td>
-      <td>0</td>
-      <td>2022-01-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Elisha Jian Park</td>
-      <td>03/09/2022 0:00 AM</td>
-      <td>03/09/2022 0:00 AM</td>
-      <td>Length</td>
-      <td>21.3</td>
-      <td>0.9884</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Measured by Nurse</td>
-      <td>2022-03-09</td>
-      <td>3</td>
-      <td>2</td>
-      <td>Wednesday</td>
-      <td>00:00:00</td>
-      <td>0</td>
-      <td>2022-01-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Elisha Jian Park</td>
-      <td>03/09/2022 0:00 AM</td>
-      <td>03/09/2022 0:00 AM</td>
-      <td>Weight</td>
-      <td>7.53</td>
-      <td>0.5487</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>Measured by Nurse</td>
-      <td>2022-03-09</td>
-      <td>3</td>
-      <td>2</td>
-      <td>Wednesday</td>
-      <td>00:00:00</td>
-      <td>0</td>
-      <td>2022-01-01 00:00:00</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>1886</th>
-      <td>Elisha Jian Park</td>
-      <td>08/05/2022 17:20 PM</td>
-      <td>08/05/2022 17:20 PM</td>
-      <td>Diaper</td>
-      <td>Dirty</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>2022-08-05</td>
-      <td>8</td>
-      <td>4</td>
-      <td>Friday</td>
-      <td>17:20:00</td>
-      <td>17</td>
-      <td>2022-01-01 17:00:00</td>
-    </tr>
-    <tr>
-      <th>1880</th>
-      <td>Elisha Jian Park</td>
-      <td>08/05/2022 6:30 AM</td>
-      <td>08/05/2022 6:30 AM</td>
-      <td>Feeding</td>
-      <td>6</td>
-      <td>NaN</td>
-      <td>0.0</td>
-      <td>Bottle</td>
-      <td>NaN</td>
-      <td>2022-08-05</td>
-      <td>8</td>
-      <td>4</td>
-      <td>Friday</td>
-      <td>06:30:00</td>
-      <td>6</td>
-      <td>2022-01-01 06:00:00</td>
-    </tr>
-    <tr>
-      <th>1881</th>
-      <td>Elisha Jian Park</td>
-      <td>08/05/2022 9:03 AM</td>
-      <td>08/05/2022 9:03 AM</td>
-      <td>Feeding</td>
-      <td>5</td>
-      <td>NaN</td>
-      <td>0.0</td>
-      <td>Bottle</td>
-      <td>NaN</td>
-      <td>2022-08-05</td>
-      <td>8</td>
-      <td>4</td>
-      <td>Friday</td>
-      <td>09:03:00</td>
-      <td>9</td>
-      <td>2022-01-01 09:00:00</td>
-    </tr>
-    <tr>
-      <th>1882</th>
-      <td>Elisha Jian Park</td>
-      <td>08/05/2022 9:45 AM</td>
-      <td>08/05/2022 9:45 AM</td>
-      <td>Feeding</td>
-      <td>2</td>
-      <td>NaN</td>
-      <td>0.0</td>
-      <td>Bottle</td>
-      <td>NaN</td>
-      <td>2022-08-05</td>
-      <td>8</td>
-      <td>4</td>
-      <td>Friday</td>
-      <td>09:45:00</td>
-      <td>9</td>
-      <td>2022-01-01 09:00:00</td>
-    </tr>
-    <tr>
-      <th>1891</th>
-      <td>Elisha Jian Park</td>
-      <td>08/06/2022 12:43 PM</td>
-      <td>08/06/2022 12:43 PM</td>
+      <td>08/06/2022 15:30 PM</td>
+      <td>08/06/2022 15:30 PM</td>
       <td>Feeding</td>
       <td>5</td>
       <td>NaN</td>
@@ -631,14 +454,90 @@ df2.tail(5)
       <td>8</td>
       <td>5</td>
       <td>Saturday</td>
-      <td>12:43:00</td>
-      <td>12</td>
-      <td>2022-01-01 12:00:00</td>
+      <td>15:30:00</td>
+      <td>15</td>
+      <td>2022-01-01 15:00:00</td>
+    </tr>
+    <tr>
+      <th>1892</th>
+      <td>Elisha Jian Park</td>
+      <td>08/06/2022 18:44 PM</td>
+      <td>08/06/2022 18:44 PM</td>
+      <td>Feeding</td>
+      <td>6</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>Bottle</td>
+      <td>NaN</td>
+      <td>2022-08-06</td>
+      <td>8</td>
+      <td>5</td>
+      <td>Saturday</td>
+      <td>18:44:00</td>
+      <td>18</td>
+      <td>2022-01-01 18:00:00</td>
+    </tr>
+    <tr>
+      <th>1888</th>
+      <td>Elisha Jian Park</td>
+      <td>08/06/2022 5:55 AM</td>
+      <td>08/06/2022 5:55 AM</td>
+      <td>Feeding</td>
+      <td>4</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>Bottle</td>
+      <td>NaN</td>
+      <td>2022-08-06</td>
+      <td>8</td>
+      <td>5</td>
+      <td>Saturday</td>
+      <td>05:55:00</td>
+      <td>5</td>
+      <td>2022-01-01 05:00:00</td>
+    </tr>
+    <tr>
+      <th>1887</th>
+      <td>Elisha Jian Park</td>
+      <td>08/06/2022 6:44 AM</td>
+      <td>08/06/2022 6:44 AM</td>
+      <td>Feeding</td>
+      <td>2</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>Bottle</td>
+      <td>NaN</td>
+      <td>2022-08-06</td>
+      <td>8</td>
+      <td>5</td>
+      <td>Saturday</td>
+      <td>06:44:00</td>
+      <td>6</td>
+      <td>2022-01-01 06:00:00</td>
+    </tr>
+    <tr>
+      <th>1889</th>
+      <td>Elisha Jian Park</td>
+      <td>08/06/2022 9:28 AM</td>
+      <td>08/06/2022 9:28 AM</td>
+      <td>Feeding</td>
+      <td>5.8</td>
+      <td>NaN</td>
+      <td>0.0</td>
+      <td>Bottle</td>
+      <td>NaN</td>
+      <td>2022-08-06</td>
+      <td>8</td>
+      <td>5</td>
+      <td>Saturday</td>
+      <td>09:28:00</td>
+      <td>9</td>
+      <td>2022-01-01 09:00:00</td>
     </tr>
   </tbody>
 </table>
-<p>1889 rows × 16 columns</p>
 </div>
+
 
 
 
