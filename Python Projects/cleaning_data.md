@@ -97,7 +97,7 @@ df.resample('W').agg({'Column 1': 'mean', 'Column 2': 'sum', 'Column 3': 'min'})
 ### Export
 ```
 df.to_csv('filepath')
-df.to_csv('filepath', sep='\t') #tsv
+df.to_csv('filepath', sep='\t', index=False) #tsv
 df.to_excel('filepath')
 df.to_json('filepath', orient='records', lines=True)
 ```
