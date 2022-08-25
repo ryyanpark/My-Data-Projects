@@ -4,7 +4,7 @@
 ```
 na_vals = ['NA', 'Missing', 'N/A', 'none'] #custom null values
 d_parser = lambda x: pd.datetime.strptime(x, '%Y-%m-%d %I-%p') #date format
-df = pd.read_csv('filepath', na_values=na_vals, index_col='Set Column As Index', parse_date=['Date columns needing formatting'], date_parser=d_parser)
+df = pd.read_csv('filepath', na_values=na_vals, index_col='Set Column As Index', parse_date=['Date columns needing formatting'], date_parser=d_parser, index=false)
 ```
 
 ### Import Excel/JSON
