@@ -18,8 +18,6 @@ This dataset includes:
 3. When did feedings become scheduled/consistent?
 4. Did feeding amount affect dirty diaper frequency?
 
-##### Initial Setup
-
 
 
 ## Weight
