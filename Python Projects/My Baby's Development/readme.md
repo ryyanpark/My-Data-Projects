@@ -36,7 +36,7 @@ plt.ylabel('Pounds')
 
 
     
-![png](output_24_1.png)
+![png](./Images/output_24_1.png)
     
 
 
@@ -57,7 +57,7 @@ plt.title('Weight Percentile')
 
 
     
-![png](output_25_1.png)
+![png](./Images/output_25_1.png)
     
 
 
@@ -81,7 +81,7 @@ plt.ylabel('Inches')
 
 
     
-![png](output_31_1.png)
+![png](./Images/output_31_1.png)
     
 
 
@@ -101,7 +101,7 @@ plt.title('Length Percentile')
 
 
     
-![png](output_32_1.png)
+![png](./Images/output_32_1.png)
     
 
 
@@ -127,7 +127,7 @@ plt.ylabel('Ounces')
 
 
     
-![png](output_40_1.png)
+![png](./Images/output_40_1.png)
     
 
 
@@ -163,7 +163,7 @@ fig.tight_layout()
 
 
     
-![png](output_45_0.png)
+![png](./Images/output_45_0.png)
     
 
 
@@ -203,7 +203,7 @@ plt.xlabel('Hour')
 
 
     
-![png](output_53_1.png)
+![png](./Images/output_53_1.png)
     
 
 
@@ -261,7 +261,7 @@ fig.tight_layout()
 
 
     
-![png](output_59_0.png)
+![png](./Images/output_59_0.png)
     
 
 
@@ -316,7 +316,7 @@ fig.tight_layout()
 
 
     
-![png](output_66_0.png)
+![png](./Images/output_66_0.png)
     
 
 
@@ -353,7 +353,7 @@ plt.gcf().tight_layout()
 
 
     
-![png](output_79_0.png)
+![png](./Images/output_79_0.png)
     
 
 
@@ -379,7 +379,7 @@ ax.tick_params(axis='x', rotation=45)
 
 
     
-![png](output_84_0.png)
+![png](./Images/output_84_0.png)
     
 
 
@@ -404,7 +404,7 @@ ax_dd = plt.scatter(x,y)
 
 
     
-![png](output_85_0.png)
+![png](./Images/output_85_0.png)
     
 
 
