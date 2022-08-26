@@ -1,7 +1,5 @@
 # My Baby's Development
-Charting of my 5 month old daughter's growth, feedings, and dirty diapers
-
-For full code, see ipynb file.
+(For full code, see ipynb file.)
 
 With the birth of our first child, my wife and I did not know what to expect. We were new to the game and we weren't sure if our daugther was growing healthy and strong. However, with apps like Hatchbaby, we were able to chart her growth, feeds, and dirty diapers. This data helped us to make sure she was on the right track!
 
