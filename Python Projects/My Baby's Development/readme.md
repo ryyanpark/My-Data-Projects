@@ -1,6 +1,23 @@
 # My Baby's Development
 (For full code, see ipynb file.)
 
+## Table of Contents
+  - [Intro](#intro)
+  - [Data Info](#data-info)
+  - [Questions To Answer](#questions-to-answer)
+  - [Weight](#weight)
+  - [Length](#length)
+  - [Feeding](#feeding)
+  - [Feeding: Sum by Day](#-sum-by-day)
+  - [Feeding: Sum by Hr](#-sum-by-hr)
+  - [Feeding: Avg by Hr](#-avg-by-hr)
+  - [Feeding: Sum by Hr/Month](#-sum-by-hrmonth)
+  - [Feeding: Avg by Hr/Month](#-avg-by-hrmonth)
+  - [Feeding: Count by Day](#-count-by-day)
+  - [Dirty Diapers](#dirty-diapers)
+  - [Conclusion](#conclusion)
+
+## Intro
 With the birth of our first child, my wife and I did not know what to expect. We were new to the game and we weren't sure if our daugther was growing healthy and strong. However, with apps like Hatchbaby, we were able to chart her growth, feeds, and dirty diapers. This data helped us to make sure she was on the right track!
 
 ## <u>Data Info</u> 
@@ -135,7 +152,7 @@ There was a jump of about 10oz in May, which coincides with the slight increase 
 
 
 
-#### *-Sum by Hour*
+#### *-Sum by Hr*
 
 
 ```python
@@ -223,7 +240,7 @@ Top ten hours for average amount were:
 
 
 
-#### *-Sum by Hour/Month*
+#### *-Sum by Hr/Month*
 
 
 ```python
@@ -278,7 +295,7 @@ Total Feeding Amount - Top 3 Hours by Month:
 
 
 
-#### *-Avg by Hour/Month*
+#### *-Avg by Hr/Month*
 
 
 ```python
@@ -335,7 +352,7 @@ For the first few months, the average feeding times seem to be spread out more o
 
 
 
-#### *-Number of Feedings Per Day*
+#### *-Count by Day*
 
 
 ```python
