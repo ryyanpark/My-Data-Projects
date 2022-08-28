@@ -7,7 +7,6 @@
   - [Questions To Answer](#questions-to-answer)
   - [Weight](#weight)
   - [Length](#length)
-  - [Feeding](#feeding)
   - [Feeding: Sum by Day](#-sum-by-day)
   - [Feeding: Sum by Hr](#-sum-by-hr)
   - [Feeding: Avg by Hr](#-avg-by-hr)
